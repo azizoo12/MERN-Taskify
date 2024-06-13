@@ -37,7 +37,7 @@ const TaskForm = forwardRef( ({reRendertasks},ref)=>{
                 const img = document.querySelector('input[type="file"]').files[0];
                 if(img){
                     const {data} =  await axios.post(
-                        "http://localhost:3002/api/tasks/upload",
+                        "https://mern-taskify-backend.onrender.com/api/tasks/upload",
                         {
                             image:img
                         },
