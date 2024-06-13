@@ -10,7 +10,7 @@ export default function BoardViewPage(){
     const [updateTasks , setupdateTasks] = useState(false);
     const [uncompletedTasks,setuncompletedTasks] = useState();
     const getTasks = async ()=>{
-        const {data} = await axios.get("http://localhost:3002/api/tasks");
+        const {data} = await axios.get("https://mern-taskify-backend.onrender.com/api/tasks");
         if(data.success === true){
             const uncompleted =  
             data.data.filter(e=>e.completed === false)
