@@ -25,7 +25,7 @@ const TaskForm = forwardRef( ({reRendertasks},ref)=>{
             path: pathInput.current.value == "" ? "/": pathInput.current.value.replace("C:\\fakepath\\","uploads/")
         }
         try{
-            const {data} = await axios.post("https://mern-taskify-9a9x.onrender.com/api/tasks/add",task);
+            const {data} = await axios.post("https://mern-taskify-backend.onrender.com/api/tasks/add",task);
             if(data.success === true){
                 notification(currentValue=>{
                     if(currentValue){
